@@ -41,12 +41,6 @@ Lane module:
 8. Readout[7] - Seconds x .01 - 7F to 76 (0 - 9 DEC)
 
 Where the first four bits of the byte, 0-7, represents which readout and the second four bits of the byte, 0-F, represents the value the readout displays. The second four bits are inverse so we have to XOR to display the correct value.
-### Address Zero
-This has been referred to a Channel 0 from others but it is the clock that runs consistently once the timing console is powered and initialized.
-
-Each time there’s a start received at the timing console, it resets the data to blank including the lane data.
-
-At the scoreboard this Channel displays the running time since the start for each lane module until a split/finish input is detected.
 ### Lane Data
 The lane modules utilizes two different decimal values, greater than 127 DEC, to control what to display and when.
 
@@ -57,3 +51,9 @@ When the channel number address byte decimal is greater than 169 DEC and less th
 
 When the channel number address byte decimal is greater than 191 DEC; Bit 7, is TRUE or 1, the module will be:
 - (On) showing Lane Number and Running Time
+### Address Zero
+This has been referred to a Channel 0 from others but it is the clock that runs consistently once the timing console is powered and initialized.
+
+Each time there’s a start received at the timing console, it resets the data to blank including the lane data.
+
+At the scoreboard this Channel displays the running time since the start for each lane module until a split/finish input is detected.
