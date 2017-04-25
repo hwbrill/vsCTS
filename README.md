@@ -16,7 +16,7 @@ The data for the readouts is preceded by a one byte of data representing the cha
 
 Each module will receive two sets of eight bytes of data with the first set representing the readout value to be displayed and the second set representing the format, i.e. decimal/colon activation.
 
-For the purpose of this project the second set is not needed and is ignored.
+**_For the purpose of this project the second set is not needed and is ignored._**
 
 The channel number is determined from the byte of data having a value greater than 127 DEC which is immediately followed by up to eight bytes of data having a value less than 128 DEC for the readouts to display.
 ### Parsing Out the Channel Address
