@@ -30,9 +30,17 @@ Taking a closer look at the ASCII table, there are 8 sets of 16 values between 0
 
 Taking even a closer look, you can see how the HEX format comes into play.
 
-The first readout in a Lane module, Lane Number, is assigned it’s value from the serial data containing 0F HEX to 06 HEX; Place – 1E HEX to 17 HEX; … Seconds x .01 – 7F HEX to 76 HEX.  Where the first four bits of the byte, 0-7, represents which readout and the second four bits of the byte, 0-F, represents the value the readout displays.
+Lane module:
+1. Readout[0] - Lane Number - 0E to 05 HEX (1 - 10 DEC)
+2. Readout[1] - Place - 1E to 15 HEX (1 - 10 DEC)
+3. Readout[2] - Minutes x 10 - 2F to 26 HEX (0 - 9 DEC)
+4. Readout[3] - Minutes x 1 - 3F to 36 HEX (0 - 9 DEC)
+5. Readout[4] - Seconds x 10 - 4F to 4A (0 - 5 DEC)
+6. Readout[5] - Seconds x 1 - 5F to 56 (0 - 9 DEC)
+7. Readout[6] - Seconds x .1 - 6F to 66 (0 - 9 DEC)
+8. Readout[7] - Seconds x .01 - 7F to 76 (0 - 9 DEC)
 
-The second four bits are inverse so we have to XOR to display the correct value.
+Where the first four bits of the byte, 0-7, represents which readout and the second four bits of the byte, 0-F, represents the value the readout displays. The second four bits are inverse so we have to XOR to display the correct value.
 ### Address Zero
 This has been referred to a Channel 0 from others but it is the clock that runs consistently once the timing console is powered and initialized.
 
