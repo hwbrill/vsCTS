@@ -52,7 +52,7 @@ When the channel number address byte decimal is greater than 169 DEC and less th
 When the channel number address byte decimal is greater than 191 DEC; Bit 7, is TRUE or 1, the module will be:
 - (On) showing Lane Number and Running Time
 ### Address Zero
-This has been referred to a Channel 0 from others but it is the clock that runs consistently once the timing console is powered and initialized.
+This has been referred to as Channel 0 from others but it is the clock that runs consistently once the timing console is powered and initialized.
 
 Each time there’s a start received at the timing console, it resets the data to blank including the lane data.
 
