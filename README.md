@@ -1,5 +1,5 @@
 # read-CTS
-A virtual scoreboard by intercepting a Colorado Timing System scoreboard input
+A virtual scoreboard by intercepting a [Colorado Time Systems](https://www.coloradotime.com/) scoreboard input
 ## The CTS Scoreboard
 Colorado Timing Systems developed the protocol to drive a scoreboard composed of module displays having up to eight seven-segment readouts.
 
