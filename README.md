@@ -1,5 +1,5 @@
 # read-CTS
-###**_A virtual scoreboard by intercepting a [Colorado Time Systems](https://www.coloradotime.com/) scoreboard input
+### **_A virtual scoreboard by intercepting a [Colorado Time Systems](https://www.coloradotime.com/) scoreboard input_**
 ## [The CTS Scoreboard](https://www.google.com/patents/US4263736)
 Colorado Time Systems developed the protocol to drive a scoreboard composed of multiple module displays having up to eight(8) seven-segment readouts for each.
 The modules are configured to represent either Lane, Event/Heat, Lengths/Record, Team Scores, Place and Time information.
@@ -19,9 +19,11 @@ Taking a closer look at the ASCII table, there are 8 sets of 16 values between 0
 This has been referred to a Channel 0 from others but it is the clock that runs consistently once the timing console is powered and initialized.  Each time there’s a start received at the timing console, it resets the data to blank including the lane data.  At the scoreboard this Channel displays the running time since the start for each lane module until a split/finish input is detected.
 ### Lane Data
 The lane modules utilizes two different decimal values, greater than 127 DEC, to control what to display and when.
+
 When the channel number address byte decimal is greater than 169 DEC and less than 190 DEC; Bit 7, having the Most Significant Bit (MSB) being 8, is FALSE or 0, the module will be:
-•	(Off) Blank
-•	(On) showing Lane Number and Split or
-•	(On) showing Lane Number, Place and Finish Time
+- (Off) Blank
+- (On) showing Lane Number and Split or
+- (On) showing Lane Number, Place and Finish Time
+
 When the channel number address byte decimal is greater than 191 DEC; Bit 7, is TRUE or 1, the module will be:
-•	(On) showing Lane Number and Running Time
+- (On) showing Lane Number and Running Time
