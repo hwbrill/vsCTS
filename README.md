@@ -1,6 +1,8 @@
 # vsCTS
 ### **_A virtual scoreboard by intercepting a [Colorado Time Systems](https://www.coloradotime.com/) scoreboard input using a Particle Photon_**
 ## [The CTS Scoreboard](https://www.google.com/patents/US4263736)
+[Typical Scoreboard Configuration Reference](https://drive.google.com/open?id=0BzTyI86tWFG5TWFhZEZlM3dpRXM)
+
 Colorado Time Systems developed the protocol to drive a scoreboard composed of multiple module displays having up to eight(8) seven-segment readouts for each.
 
 The modules are configured to represent either Lane, Event/Heat, Lengths/Record, Team Scores, Place and Time information.
