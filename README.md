@@ -11,7 +11,7 @@ Lane modules are configured, by displaying left to right; Lane Number, Place, Mi
 
 The position of the readouts correlates similar to that of an eight character array[8].  So, data in array[0] - Lane Number; array[1] - Place; ... array[7] - Seconds x .01
 
-Communications to the scoreboard is done serially at 9600 baud continuously having no delimiters, new line or carriage return; the scoreboard doesn't respond back at all to the timing console.  Refer to [ASCII Table](http://www.ascii-code.com/)
+Communications to the scoreboard is done serially at 9600 baud continuously having no delimiters, new line or carriage return; the scoreboard doesn't respond back at all to the timing console.
 
 ## The Protocol
 The data for the readouts is preceded by a one byte of data representing the channel number of the module.
@@ -21,6 +21,8 @@ Each module will receive two sets of eight bytes of data with the first set repr
 **_For the purpose of this project the second set is not needed and is ignored._**
 
 The channel number is determined from the byte of data having a value greater than 127 DEC which is immediately followed by up to eight bytes of data having a value less than 128 DEC for the readouts to display.
+
+Refer to [ASCII Table](http://www.ascii-code.com/)
 ### Parsing Out the Channel Address
 First, determine if the data represents readout values or format, i.e. decimal/colon activation.
 
