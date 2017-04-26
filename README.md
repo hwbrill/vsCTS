@@ -25,6 +25,8 @@ First, determine if the data represents readout values or format, i.e. decimal/c
 The Least Significant Bit, LSB, from the channel number byte, determines this.  A FALSE or 0 LSB determines the following data set represents readout values.
 
 Second, the channel number is determined by shifting right by one, masking the 5 LSB’s and then XOR it.
+
+[see channel memory map](https://docs.google.com/spreadsheets/d/1ru1M2IqHrROa7BsopNoXrhaSwcioP7SOXN3_x96hDNU/edit?usp=sharing)
 ### Parsing Out the Value
 Taking a closer look at the ASCII table, there are 8 sets of 16 values between 0 DEC to 127 DEC (00 HEX to 7F HEX).
 
